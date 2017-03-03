@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns::th="http://www.thymeleaf.org">
+	<head>
+		<title>Recall</title>
+		<link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" type="text/css"/>
+	</head>
+	<body>
+	<div class="center">
+		<form method="post">
+			<select name="testIdSelects">
+				<option th:each="testsInUserTable : ${testIdNumbs}"><span th:text="${testsInUserTable}"></span></option>
+			</select>
+			<button type="submit">see Test</button>
+		</form>
+		
+		<ul>
+			<li th:each="wordsInTest : ${testWords}"><span th:text="${wordsInTest}"></span></li>
+		</ul>
+		
+		<p>average score for test:</p>
+		<p th:text="${avg}"></p>
+		<p>Times Taken:</p>
+		<p th:text="${timesTaken}"></p>
+		
+		<a href="/hello">back</a>
+	</div>
+	</body>
+</html>

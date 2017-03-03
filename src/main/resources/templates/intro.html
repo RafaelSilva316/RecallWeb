@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns::th="http://www.thymeleaf.org">
+	<head>
+		<title>Recall</title>
+		<link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" type="text/css"/>
+	</head>
+	<body>
+	<div class="center">
+		<h1 th:text="${message}"> Hello, World</h1>
+		<p>Welcome to this short-term memory experiment.</p>
+		<p>In the next screen you will see several words which will disappear after 30 seconds.</p>
+		<p>After this time, you will be prompted to write down as many words from the list as you remember.</p>
+		<p>Hit Start to begin.</p>
+		
+		<form method="POST">
+			<a href="/wordsPage">Add Tests</a>
+		    <a href="/seeTests">See Tests</a>
+		    <a href="/start">Start</a>
+		    <a href="/login">Log Out</a>
+		</form>
+	</div>
+		
+	</body>
+</html>

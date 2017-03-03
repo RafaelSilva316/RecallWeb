@@ -1,0 +1,13 @@
+/* styles.css */
+body {
+ background-color: #dddd88;
+ color: #FFFFFF;
+}
+
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 30px;
+    vertical-align: middle
+}

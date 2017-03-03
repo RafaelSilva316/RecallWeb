@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns::th="http://www.thymeleaf.org">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" type="text/css"/>
+
+		<title>Recall</title>
+	</head>
+	<body>
+	<div class="center">
+		<form method="post" id="form-search">
+			<input type="text" name="word"></input>
+			<button type="submit">add word</button>
+			<a href="/hello">finish</a>
+		</form>
+		<ul>
+			<li th:each="wordsInTest : ${testwords}"><span th:text="${wordsInTest}"></span></li>
+		</ul>
+		
+		<!-- <h1 th:text="${wordAdded}"> Hello, World</h1> -->
+	</div>
+	</body>
+	
+</html>

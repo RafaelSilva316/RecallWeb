@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns::th="http://www.thymeleaf.org">
+	<head>
+		<title>Recall</title>
+		<link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" type="text/css"/>
+	</head>
+	<body>
+	<div class="center">
+		<div id="exam" style="visibility: visible">
+			<ul>
+				<li th:each="wordsInTest : ${testWords}"><span th:text="${wordsInTest}"></span></li>
+			</ul>
+		</div>
+		<div id="goToAnswer" style="visibility: hidden">
+		
+			<a href="/answerBox">answer</a>
+			
+		</div>
+	</div>
+	</body>
+	
+	<script type="text/javascript">
+		function hideExam() {
+		  document.getElementById("exam").style.visibility = "hidden";
+		}
+		setTimeout("hideExam()", 3000);
+	</script>
+	<script type="text/javascript">
+		function showAnswerBox() {
+			if(document.getElementById("exam").style.visibility === "hidden"){
+				document.getElementById("goToAnswer").style.visibility = "visible";
+			}
+		}
+		setTimeout("showAnswerBox()", 3000);
+	</script>
+</html>

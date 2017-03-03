@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns::th="http://www.thymeleaf.org">
+	<head>
+	<link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" type="text/css"/>
+		<title>Recall</title>
+	</head>
+	<body>
+	<div class="center">
+		<form method="post">
+			<input type="text" name="name">Username</input>
+			<input autocomplete="off" type="password" name="password" >Password</input>
+			<button type="submit">login</button>
+		</form>
+		<h1 th:text="${feedback}"></h1>
+		
+		<a href="/register">Register</a>
+	</div>
+	</body>
+</html>

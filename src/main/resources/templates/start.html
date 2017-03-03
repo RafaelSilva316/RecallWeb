@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns::th="http://www.thymeleaf.org">
+	<head>
+		<title>Recall</title>
+		<link rel="stylesheet" th:href="@{/css/styles.css}" href="/css/styles.css" type="text/css"/>
+	</head>
+	<body>
+	<div class="center">
+		<form method="post">
+			<select name="testIdSelects">
+				<option th:each="testsInUserTable : ${testIdNumbs}"><span th:text="${testsInUserTable}"></span></option>
+			</select>
+			<button type="submit">choose test and start</button>
+		</form>
+	</div>
+	</body>
+</html>

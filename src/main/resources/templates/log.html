@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns::th="http://www.thymeleaf.org">
+	<head>
+		<title>Recall</title>
+	</head>
+	<body>
+		<ul>
+			<!--  display log -->
+			<li th:each="log : ${logs}">we said hello to <span th:text="${log.name}"></span> at <span th:text="${#dates.format(log.timestamp, 'yyyy-MM-dd')}"></span></li>
+			
+		</ul>
+	</body>
+</html>
